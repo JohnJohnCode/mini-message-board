@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  main
+    .btnCont
+      a(href="/new")
+        button.btn Post a new message
+    ul
+      each message, index in messages
+        li
+          .card
+            .info
+              p.added= messages[index].added
+              p.user= messages[index].user
+            .message
+              p.text= messages[index].text

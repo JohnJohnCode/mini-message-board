@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  main
+    form(action="/new", method="post").card
+      label(for="name",) Name:
+      input#name(type="text", placeholder="Optional", maxlength="15", name="name", value="")
+      label(for="message") Message:
+      textarea#message(type="text-area", placeholder="Max. 600 characters", maxlength="600", name="message", required="true")
+      div(style="text-align: center;")
+        button.btn(type="submit") Post message
